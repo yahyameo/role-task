@@ -1,0 +1,9 @@
+<div>
+  <button *acIf="['user']">User Button</button>
+  <button *acIf="['admin']">Admin Button</button>
+
+  <input *acIf="'user'; else unauthorized" placeholder="Only for user role">
+  <ng-template #unauthorized>
+    <p>You are not authorized!</p>
+  </ng-template>
+</div>
